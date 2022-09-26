@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Jeff</title>
+</head>
+<body>
+    <style>
+        .navbar{
+            display: flex;
+        }
+        .list-item{
+            padding-left: 160px;
+        }
+        .salutationBox{
+            border: 1px solid black;
+            height: 500px;
+            width: 1350px;
+            position: relative;
+        }
+        .energyBox{
+            height: 20px;
+            width: 20px;
+            background-color: black;
+            position: absolute;
+            border-radius: 50%;
+            animation: energyBoxMove linear 10s infinite;
+        }
+        .question{
+            text-align: center;
+            margin-top: 60px;
+            font-size: 32px;
+        }
+        .slider{
+            position: absolute;
+            left: 40%;
+            top: 60%;
+            width: 250px;
+        }
+        .feelingChart{
+            position: absolute;
+            left: 42%;
+            top: 350px;
+            font-size: 30px;
+        }
+        .timedSalutation{
+            border-bottom: 1px solid black;
+            width: 25%;
+            position: absolute;
+            left: 35%;
+            margin-top: 50px;
+        }
+        @keyframes energyBoxMove {
+            0% {
+                left: 0;
+                top: 0;
+                background-color: red;
+            }
+            10% {
+                left: 675px;
+                top: 0;
+                background-color: red;
+            }
+            20% {
+                left: 1330px;
+                top: 0;
+                background-color: red;
+            }
+            30%{
+                left: 1330px;
+                top: 125px;
+                background-color: black;
+            }
+            40%{
+                left: 1330px;
+                top: 250px;
+                background-color: black;
+            }
+            50%{
+                left: 1330px;
+                top: 480px;
+                background-color: green;
+            }
+            60%{
+                top: 480px;
+                left: 675px;
+                background-color: goldenrod;
+
+            }
+            70%{
+                top: 480px;
+                left: 0;
+                background-color: goldenrod;
+            }
+            80%{
+                top: 250px;
+                background-color: green;
+            }
+            90%{
+                top: 125px;
+                background-color: green;
+            }
+            100%{
+                top: 0;
+                background-color: red;
+            }
+        }
+    </style>
+    <center>
+    <h1>Welcome Mr. Bozier!</h1>
+    </center>
+    <div class="navBarContainer">
+        <div class="navbar">
+            <h4 class="list-item" id="linkedIn"><a href="https://www.google.com/" target="_blank">LinkedIn</a></h4>
+            <h4 class="list-item" id="gmail"><a href="https://jeff-b-shangoshui-universe.on.drv.tw/Portfolio/resumehttps://www.google.com/.html" target="_blank">Gmail</a></h4>
+            <h4 class="list-item" id="youtube"><a href="https://www.youtube.com/">YouTube</a></h4>
+            <h4 class="list-item" id="stackOverflow"><a href="https://stackoverflow.com/" target="_blank">StackOverflow</a></h4>
+            <h4 class="list-item" id="socialMedia"><a href="https://www.instagram.com/" target="_blank">Instagram</a></h4>
+        </div>
+    </div>
+
+    <div class="salutationBox">
+        <div class="energyBox"></div>
+        <p class="question">How Are You Feeling, Today?</p>
+        <p class="timedSalutation"></p>
+        <p class="feelingChart">feeling a lot like <span class="inputMood"></span></p>
+        <input type="range" min="1" max="10" value="5" class="slider" id="myRange">
+    </div>
+    <script>
+        function currentTime(){
+            let date = new Date();
+            let hh = date.getHours();
+            let mm = date.getMinutes();
+            let ss = date.getSeconds();
+            let session = "AM";
+
+            if (hh == 0) {
+                hh=12;
+            }
+            if (hh > 12) {
+                hh = hh -12;
+                session = "PM";
+            }
+            hh = (hh < 10) ? "0" + hh : hh;
+            mm = (mm < 10) ? "0" + mm : mm;
+            ss = (ss < 10) ? "0" + ss : ss;
+
+            let time = hh + ":" + mm + ":" + ss + " " + session;
+        }
+
+        function salutationComment {
+            if ()
+        }
+
+        currentTime();
+    </script>
+</body>
+</html>
